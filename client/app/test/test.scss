@@ -1,0 +1,88 @@
+.repeat-item.ng-enter,
+.repeat-item.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+}
+
+.repeat-item.ng-enter,
+.repeat-item.ng-leave.ng-leave-active {
+  opacity:0;
+}
+.repeat-item.ng-leave,
+.repeat-item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+.my-switch-container {
+  position:relative;
+  height:50px;
+}
+
+.my-switch-animation.ng-enter, .my-switch-animation.ng-leave {
+  height:50px;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+}
+
+.my-switch-animation.ng-enter {
+  -webkit-animation:0.5s switch-enter;
+  animation:0.5s switch-enter;
+}
+
+.my-switch-animation.ng-leave {
+  -webkit-animation:0.5s switch-leave;
+  animation:0.5s switch-leave;
+}
+
+@keyframes switch-enter {
+  from { left:100%; }
+  to { left:0; }
+}
+
+@-webkit-keyframes switch-enter {
+  from { left:100%; }
+  to { left:0; }
+}
+
+@keyframes switch-leave {
+  from { left:0; }
+  to { left:-100%; }
+}
+
+@-webkit-keyframes switch-leave {
+  from { left:0; }
+  to { left:-100%; }
+}
+
+///* starting animations */
+//.my-special-animation.ng-enter {
+//  -webkit-animation:0.5s red-to-blue;
+//  animation:0.5s red-to-blue;
+//}
+//
+//@keyframes red-to-blue {
+//  from { background:red; }
+//  to { background:blue; }
+//}
+//
+//@-webkit-keyframes red-to-blue {
+//  from { background:red; }
+//  to { background:blue; }
+//}
+
+//.my-special-animation.ng-leave,
+//.my-special-animation.ng-enter {
+//  -webkit-transition:0.5s linear all;
+//  transition:0.5s linear all;
+//}
+//
+///* destination animations */
+//.my-special-animation.ng-enter,
+//.my-special-animation.ng-leave.ng-leave-active {
+//  opacity:0;
+//}
+//.my-special-animation.ng-leave,
+//.my-special-animation.ng-enter.ng-enter-active {
+//  opacity:1 !important;
+//}

@@ -10,6 +10,10 @@ angular.module('fullAppApp')
       {
         'title': 'Test',
         'link': '/test'
+      },
+      {
+        'title': 'Messages',
+        'link': '/messages'
       }
     ];
 

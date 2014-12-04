@@ -7,10 +7,10 @@ angular.module('fullAppApp')
         'title': 'Home',
         'link': '/'
       },
-      {
-        'title': 'Test',
-        'link': '/test'
-      },
+      //{
+      //  'title': 'Test',
+      //  'link': '/test'
+      //},
       {
         'title': 'Messages',
         'link': '/messages'

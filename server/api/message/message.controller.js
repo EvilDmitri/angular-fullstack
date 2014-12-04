@@ -3,17 +3,17 @@
 var _ = require('lodash');
 var Message = require('./message.model');
 
-exports.index = function(req, res) {
-  res.send('Hello World!');
-};
+//exports.index = function(req, res) {
+//  res.send('Hello World!');
+//};
 
 // Get list of messages
-//exports.index = function(req, res) {
-//  Message.find(function (err, messages) {
-//    if(err) { return handleError(res, err); }
-//    return res.json(200, messages);
-//  });
-//};
+exports.index = function(req, res) {
+  Message.find(function (err, messages) {
+    if(err) { return handleError(res, err); }
+    return res.json(200, messages);
+  });
+};
 
 // Get a single message
 exports.show = function(req, res) {

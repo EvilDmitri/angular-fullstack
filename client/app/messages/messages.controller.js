@@ -7,7 +7,7 @@ angular.module('fullAppApp')
 
     $http.get('/api/messages').success(function(messages) {
       $scope.userMessages = messages;
-      socket.syncUpdates('Message', $scope.userMessages);
+      socket.syncUpdates('message', $scope.userMessages);
     });
 
     $scope.addMessage = function() {
@@ -15,7 +15,7 @@ angular.module('fullAppApp')
         return;
       }
 
-      $http.post('/api/messages', {  user: $scope.user.name, name: $scope.newMessage });
+      $http.post('/api/messages', {  user: $scope.user.email, name: $scope.newMessage });
       $scope.newMessage = '';
     };
 
@@ -24,6 +24,6 @@ angular.module('fullAppApp')
     };
 
     $scope.$on('$destroy', function () {
-      socket.unsyncUpdates('Message');
+      socket.unsyncUpdates('message');
     });
   });

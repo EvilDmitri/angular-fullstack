@@ -4,16 +4,39 @@ angular.module('fullAppApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [
       {
-        'title': 'Home',
-        'link': '/'
+        'title': 'Album',
+        'description': 'Find your favorite album',
+        'link': ''
       },
-      //{
-      //  'title': 'Test',
-      //  'link': '/test'
-      //},
       {
-        'title': 'Messages',
-        'link': '/messages'
+        'title': 'Artist',
+        'description': 'Find the artist your\'re looking for',
+        'link': ''
+      },
+      {
+        'title': 'Songs',
+        'description': 'Find the songs your\'re looking for',
+        'link': ''
+      },
+      {
+        'title': 'Genre',
+        'description': 'Browse all the genres',
+        'link': ''
+      },
+      {
+        'title': 'Search',
+        'description': 'Search for a specific album,\nartist or song',
+        'link': ''
+      },
+      {
+        'title': 'Playlist',
+        'description': 'Songs in the playlist',
+        'link': ''
+      },
+      {
+        'title': 'Options',
+        'description': 'Set your own options',
+        'link': ''
       }
     ];
 
